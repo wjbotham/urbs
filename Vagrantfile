@@ -1,11 +1,12 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-if !Vagrant.has_plugin?("vagrant-cachier")
-  echo "Please run the following before starting this Vagrant machine:"
-  echo "  vagrant plugin install vagrant-cachier"
-  echo
-  echo "Exiting now."
+if not Vagrant.has_plugin?("vagrant-cachier")
+  puts "Please run the following before starting this Vagrant machine:"
+  puts "  vagrant plugin install vagrant-cachier"
+  puts
+  puts "Exiting now."
+  exit 0
 end
 
 # All Vagrant configuration is done below. The "2" in Vagrant.configure
