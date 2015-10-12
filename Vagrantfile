@@ -15,7 +15,10 @@ end
 # you're doing.
 Vagrant.configure(2) do |config|
   config.vm.network "forwarded_port", guest: 80, host: 8080
-  config.vm.provider "virtualbox"
+  config.vm.provider "virtualbox" do |v|
+    v.cpus = 1
+    v.customize ["modifyvm", :id, "--hwvirtex", "off"]
+  end
   config.vm.box = "ubuntu/trusty32"
   
   # vagrant-cachier is a plugin that keeps packages around so you don't have
