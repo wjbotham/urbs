@@ -33,4 +33,5 @@ Vagrant.configure(2) do |config|
   config.vm.provision :shell, :path => "bootstrap/install-mariadb.sh"
   config.vm.provision :shell, :path => "bootstrap/install-rake.sh"
   config.vm.provision :shell, :path => "bootstrap/install-gems.sh"
+  config.vm.provision :shell, :path => "bootstrap/install-nodejs.sh"
 end
