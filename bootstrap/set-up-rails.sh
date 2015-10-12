@@ -4,6 +4,9 @@ echo "Rails setup script is still a TODO"
 #install ruby
 apt-get install -y ruby-full
 
+#install apache
+apt-get install -y apache2
+
 #install mariadb
 apt-get install -y python-software-properties
 
@@ -14,3 +17,6 @@ apt-get update
 debconf-set-selections <<< "mysql-server mysql-server/root_password password MY_PASSWORD"
 debconf-set-selections <<< "mysql-server mysql-server/root_password_again password MY_PASSWORD"
 apt-get install -y mariadb-server
+
+#install rails
+apt-get install -y rails
