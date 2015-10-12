@@ -27,6 +27,7 @@ Vagrant.configure(2) do |config|
     config.cache.scope = :box
   end
 
+  config.vm.provision :shell, :path => "bootstrap/install-rvm.sh", args: "stable"
   config.vm.provision :shell, :path => "bootstrap/install-ruby.sh"
   config.vm.provision :shell, :path => "bootstrap/install-apache.sh"
   config.vm.provision :shell, :path => "bootstrap/install-mariadb.sh"

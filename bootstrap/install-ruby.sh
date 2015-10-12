@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
-apt-get install -y ruby-full
-gem install bundler
+source /usr/local/rvm/scripts/rvm
+rvm install 2.2.3
 
+cd /vagrant
+rvm use 2.2.3
+
+gem install bundler
