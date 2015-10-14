@@ -32,6 +32,7 @@ Vagrant.configure(2) do |config|
   config.vm.provision :shell, path: 'bootstrap/install-rake.sh'
   config.vm.provision :shell, path: 'bootstrap/install-gems.sh'
   config.vm.provision :shell, path: 'bootstrap/install-nodejs.sh'
+  config.vm.provision :shell, path: 'bootstrap/terraform-database.sh'
 
   config.vm.synced_folder '.', '/vagrant'
 end
